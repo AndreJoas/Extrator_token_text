@@ -7,6 +7,8 @@ selecione um tipo de token (como substantivos, verbos, etc.), e a aplicação pr
 apenas os tokens correspondentes ao tipo selecionado. Isso pode ser útil para diversas tarefas de processamento de linguagem natural (NLP), 
 como análise de texto, extração de informações específicas ou categorização de palavras com base em suas funções gramaticais.
 
+PS: depois de baixar o repositório, instale os requeriments.txt no ambiente Local😉😉
+
 #Page 1
 ![image](https://github.com/user-attachments/assets/35c7e98b-a114-4416-b619-1b8c5941c16d)
 
