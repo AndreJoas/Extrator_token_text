@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="static/style.css" />
+    <title>Extrair Tokens</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Extrator de Tokens Automático</h1>
+      <form method="POST">
+        <label for="text">Texto Principal:</label><br />
+        <textarea id="text" name="text" rows="10" cols="50">{{ text }}</textarea
+        ><br /><br />
+
+        <label for="token-type">Escolha o Tipo de Token:</label>
+        <select id="token-type" name="token_type">
+          <option value="ADJ">Adjetivo</option>
+          <option value="ADP">Preposição</option>
+          <option value="ADV">Advérbio</option>
+          <option value="AUX">Verbo auxiliar</option>
+          <option value="CONJ">Conjunção</option>
+          <option value="CCONJ">Conjunção coordenativa</option>
+          <option value="DET">Determinante(artigo)</option>
+          <option value="INTJ">Interjeição</option>
+          <option value="NOUN">Substantivo</option>
+          <option value="NUM">Número</option>
+          <option value="PART">Partícula</option>
+          <option value="PRON">Pronome</option>
+          <option value="PROPN">Substantivo próprio(nome)</option>
+          <option value="PUNCT">Pontuação</option>
+          <option value="SCONJ">Conjunção subordinativa</option>
+          <option value="SYM">Símbolo</option>
+          <option value="VERB">Verbos</option>
+          <option value="X">Outro</option></select
+        ><br /><br />
+
+        <button type="submit">Extrair</button>
+      </form>
+
+      <h2>Tokens Extraídos:</h2>
+      <div class="quadr">
+        <div id="result">
+          {% if tokens %}
+          <ul>
+            {% for token in tokens %}
+            <li>{{ token }}</li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <p>Nenhum token encontrado.</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
